@@ -4,6 +4,9 @@ conf.yaml
 conf.yml
 conf.json
 
+# auto generated docs
+site/
+
 # Environments
 .env
 .envrc

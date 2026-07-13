@@ -13,7 +13,7 @@ def upload_image(
     image_group_subfolder: str = "",
     timestamp_ms: int = 0,
     device_type: str = "user-upload",
-    host: str = "[https://api.kexxu.com](https://api.kexxu.com)"
+    host: str = "https://api.kexxu.com"
 ) -> requests.Response:
     """
     Uploads an image to the Kexxu API using exact multipart boundaries and defaults.

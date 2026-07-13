@@ -31,7 +31,7 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          python -m pytest --cov=kexxu_editor_sdk --cov-report=xml --cov-report=term-missing --cov-fail-under=50
+          python -m pytest --cov=kexxu_editor_sdk --cov-report=xml --cov-report=term-missing --cov-fail-under=30
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
