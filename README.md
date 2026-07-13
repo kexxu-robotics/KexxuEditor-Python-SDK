@@ -37,6 +37,7 @@ import requests
 
 # Core Configuration
 API_KEY = "your_actual_api_key_here"
+PROJECT_ID = 12345
 IMAGE_PATH = "captures/frame_0102.jpg"
 
 # -------------------------------------------------------------
@@ -47,7 +48,7 @@ try:
     response = upload_image(
         file_path=IMAGE_PATH,
         api_key=API_KEY,
-        ai_object_id=1234,
+        ai_object_id=PROJECT_ID,
         name="doorway_detection_01.jpg",
         image_group_name="main_entrance",
     )
