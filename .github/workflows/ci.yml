@@ -8,7 +8,8 @@ on:
 jobs:
   pytest:
     runs-on: ubuntu-latest
-    environment: test
+    environment: 
+      name: test
     strategy:
       fail-fast: false
       matrix:
