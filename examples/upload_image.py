@@ -1,4 +1,4 @@
-from kexxu_editor_sdk.api import upload_image
+from kexxu_editor_sdk.api.upload_image import upload_image
 import requests
 
 # Core Configuration
