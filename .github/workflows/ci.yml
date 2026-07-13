@@ -31,9 +31,19 @@ jobs:
           pip install -e .
           pip install -r requirements.txt
 
-      - name: Run tests with coverage
-        run: |
-          python -m pytest --cov=kexxu_editor_sdk --cov-report=xml --cov-report=term-missing --cov-fail-under=30
+    - name: Run tests with coverage
+      if: >
+        github.event_name == 'push' ||
+        github.event.pull_request.head.repo.full_name == github.repository
+      env:
+        KEXXU_API_KEY: ${{ secrets.KEXXU_API_KEY }}
+        KEXXU_PROJECT_ID: ${{ secrets.KEXXU_PROJECT_ID }}
+      run: |
+        python -m pytest \
+          --cov=kexxu_editor_sdk \
+          --cov-report=xml \
+          --cov-report=term-missing \
+          --cov-fail-under=30
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
