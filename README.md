@@ -32,7 +32,7 @@ Then using Python:
 
 ```python
 
-from kexxu_editor_sdk.api import upload_image
+from kexxu_editor_sdk.api.upload_image import upload_image
 import requests
 
 # Core Configuration
@@ -40,9 +40,6 @@ API_KEY = "your_actual_api_key_here"
 PROJECT_ID = 12345
 IMAGE_PATH = "captures/frame_0102.jpg"
 
-# -------------------------------------------------------------
-# Example A: Minimal Image Upload
-# -------------------------------------------------------------
 try:
     print("Initiating standard upload...")
     response = upload_image(
