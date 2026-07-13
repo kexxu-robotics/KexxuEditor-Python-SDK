@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kexxu-editor-sdk"
+version = "0.1.0"
+description = "Python SDK for the Kexxu Cloud"
+authors = [
+    { name = "Jurriaan Schreuder", email = "jschreuder@kexxu.com" }
+]
+requires-python = ">=3.7"
+
+dependencies = [
+  "requests",
+  "requests_toolbelt",
+  "numpy>=1.15.0",
+  "paho-mqtt>=2.1.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
