@@ -11,7 +11,7 @@ def upload_image(
     name: str,
     image_group_name: str,
     image_group_subfolder: str = "",
-    timestamp_ms: int = None,
+    timestamp_ms: int = 0,
     device_type: str = "user-upload",
     host: str = "[https://api.kexxu.com](https://api.kexxu.com)"
 ) -> requests.Response:
@@ -20,7 +20,7 @@ def upload_image(
     """
 
     # default timestamp to now
-    if timestamp_ms is None:
+    if timestamp_ms == 0:
         timestamp_ms = int(time.time() * 1000)
 
     url = f"{host.rstrip('/')}/api/images/upload"

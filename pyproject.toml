@@ -12,6 +12,8 @@ authors = [
 requires-python = ">=3.7"
 
 dependencies = [
+  "dotenv-python",
+  "pytest",
   "requests",
   "requests_toolbelt",
   "numpy>=1.15.0",
